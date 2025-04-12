@@ -1,133 +1,125 @@
-/* Основні стилі */
+/* Загальні стилі */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-a {
-    text-decoration: none;
-}
-
-h1, h2 {
-    margin: 0;
-    font-weight: 600;
-    font-size: 36px;
-}
-
-/* Герб міста */
-.center-img {
-    width: 150px; /* Розмір герба */
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto;
-}
-
-section {
-    padding: 50px;
-    text-align: center;
-}
-
-/* Головний фон */
-.hero-container {
     background: linear-gradient(to right, #0057b8, #ffd700);
     color: #fff;
-    padding: 80px 0;
-    transition: background 0.3s ease;
 }
 
-.about-container, .contacts-container, .join-container {
-    background: #f4f4f4;
-    color: #333;
-    padding: 60px 20px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-footer {
-    background: #333;
-    color: #fff;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    text-align: center;
+    background-color: #003366;
 }
 
-/* Кнопки */
+.logo-img {
+    height: 50px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.container h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.map-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Стилі для кнопок */
 .btn {
+    display: inline-block;
     padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
     background-color: #0057b8;
     color: white;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    font-size: 18px;
-    margin: 10px;
-    display: inline-block;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    transform: scale(1.1);
     background-color: #0044a3;
+    transform: scale(1.1);
 }
 
-/* Темна тема */
-body.dark-theme {
-    background-color: #121212;
-    color: #fff;
-}
-
-body.dark-theme .hero-container {
-    background: linear-gradient(to right, #333, #555);
-}
-
-body.dark-theme .about-container, .body.dark-theme .contacts-container {
-    background: #222;
-    color: #ddd;
-}
-
-/* Перемикач теми */
-.theme-switcher {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.theme-switcher input[type="checkbox"] {
+/* Модальне вікно */
+.modal {
     display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.theme-switcher .slider {
-    position: relative;
-    display: block;
-    width: 60px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 50px;
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.theme-switcher .slider:before {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: white;
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #0057b8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
-/* Коли перемикач увімкнений */
-#theme-toggle:checked + .slider {
-    background-color: #333;
+button:hover {
+    background-color: #0044a3;
+    transform: scale(1.1);
 }
-
-#theme-toggle:checked + .slider:before {
-    transform: translateX(30px);
-}
-
-/* Анімація тексту */
-.animated {
-    animation: fadeIn 1s ease-out
