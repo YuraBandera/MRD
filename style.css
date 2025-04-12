@@ -13,6 +13,15 @@ a {
 h1, h2 {
     margin: 0;
     font-weight: 600;
+    font-size: 36px;
+}
+
+/* Герб міста */
+.center-img {
+    width: 150px; /* Розмір герба */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
 section {
@@ -28,7 +37,7 @@ section {
     transition: background 0.3s ease;
 }
 
-.about-container, .contacts-container {
+.about-container, .contacts-container, .join-container {
     background: #f4f4f4;
     color: #333;
     padding: 60px 20px;
@@ -50,6 +59,9 @@ footer {
     border-radius: 8px;
     font-weight: 600;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 18px;
+    margin: 10px;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -115,3 +127,7 @@ body.dark-theme .about-container, .body.dark-theme .contacts-container {
 #theme-toggle:checked + .slider:before {
     transform: translateX(30px);
 }
+
+/* Анімація тексту */
+.animated {
+    animation: fadeIn 1s ease-out
