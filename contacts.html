@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Контакти - Міська Рада м. Дніпра</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Контакти</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="animated-link">Головна</a></li>
-        <li><a href="about.html" class="animated-link">Про нас</a></li>
-        <li><a href="contacts.html" class="animated-link">Контакти</a></li>
-        <li><a href="https://surl.li/diemom" target="_blank" class="btn primary-btn">Вступити до Ради</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Перемикач теми -->
+    <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="slider"></label>
+    </div>
 
-  <main>
-    <section id="hero">
-      <h1>Контакти</h1>
-      <p>Зв'яжіться з нами за допомогою нижче вказаних контактів.</p>
+    <section id="contacts" class="contacts-container">
+        <!-- Герб міста -->
+        <div class="hero-logo">
+            <img src="герб.png" alt="Герб міста" class="center-img">
+        </div>
+        <h1 class="animated">Контакти</h1>
+        <p class="animated">Для отримання додаткової інформації або звернення до нас, будь ласка, скористайтеся формою на цій сторінці.</p>
+        <a href="mailto:info@mrd.dp.ua" class="btn primary-btn animated">Зв'язатися з нами</a>
     </section>
-    <section>
-      <p>Телефон: +380 (95) 123 4567</p>
-      <p>Email: info@mrd.dp.ua</p>
-    </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Міська Рада м. Дніпра</p>
-  </footer>
+    <footer>
+        <p class="animated">© 2025 Міська Рада м. Дніпра</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
