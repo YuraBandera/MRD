@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f5f5;
+  background: linear-gradient(to right, #0057b8, #ffcd00); /* Синьо-жовтий градієнт */
   color: #333;
   line-height: 1.6;
   font-size: 16px;
@@ -31,7 +31,7 @@ ul {
 
 /* Стилі для хедера */
 .header {
-  background-color: #0057b8;
+  background-color: rgba(0, 87, 184, 0.9); /* Слабка прозорість для темного фону */
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -50,6 +50,7 @@ ul {
   font-size: 2.5rem;
 }
 
+/* Стилі для навігації */
 .header nav ul {
   display: flex;
   justify-content: center;
@@ -64,166 +65,90 @@ ul {
   color: white;
   font-size: 1.2rem;
   font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Додаємо анімацію для кнопок */
+  display: inline-block; /* Для вирівнювання */
 }
 
 .header nav ul li a:hover {
   color: #f0f0f0;
+  background-color: #0044a3;
+  transform: scale(1.1); /* Кнопка збільшується при наведенні */
 }
 
-/* Стилі для кнопок */
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
+/* Стилі для головної секції */
+.hero {
   text-align: center;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.primary-btn {
-  background-color: #0057b8;
+  padding: 60px 0;
+  background-color: rgba(0, 87, 184, 0.8);
   color: white;
 }
 
-.primary-btn:hover {
-  background-color: #0044a3;
-}
-
-/* Стилі для секцій */
-main {
-  padding: 50px 0;
-}
-
-/* Стилі для секції "Про нас" */
-.about,
-.contact,
-.news,
-.join {
-  background-color: white;
-  padding: 50px 0;
-  text-align: center;
-}
-
-h2 {
-  font-size: 2.5rem;
+.hero h2 {
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
-/* Стилі для "Про нас" */
-.about p,
-.contact p,
-.news-item p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-/* Стилі для форм на сторінці контактів */
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #0057b8;
-  color: white;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0044a3;
-}
-
-/* Стилі для новин */
-.news-item {
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.news-item h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.news-item p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-}
-
-.news-item .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0057b8;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-}
-
-.news-item .btn:hover {
-  background-color: #0044a3;
-}
-
-/* Стилі для сторінки "Вступити" */
-.join h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.join p {
+.hero p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-/* Футер */
+.hero .btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  background-color: #ffcd00;
+  color: #0057b8;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: scale(1.1); /* Анімація збільшення кнопки */
+  background-color: #ffb700;
+}
+
+/* Стилі для футера */
 footer {
   background-color: #333;
   color: white;
-  text-align: center;
   padding: 20px 0;
+  text-align: center;
 }
 
-footer p {
-  font-size: 1rem;
+/* Стилі для контенту */
+main {
+  padding: 40px 0;
 }
 
-/* Анімації */
-@keyframes fade-in {
-  from {
+.container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.container p, .container ul {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Контакти */
+.contact p {
+  font-size: 1.2rem;
+}
+
+/* Анімація для елементів */
+.animated {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
 
-.animated {
-  animation: fade-in 1s ease-in-out;
-}
-
-.fade-in-delay {
-  animation-delay: 0.5s;
-}
