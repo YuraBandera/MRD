@@ -1,76 +1,81 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f7fa;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background: #f0f4fa;
 }
 
-header {
-    background: #005bbb;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 2em;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-}
-
-header .logo img {
-    height: 60px;
-    margin-right: 15px;
-    transition: transform 0.3s ease;
-}
-
-header .logo img:hover {
-    transform: scale(1.1);
+nav {
+    background: #0057b7;
+    padding: 10px 0;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 12px 20px;
+    transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffd500;
+    background: #003c8f;
+    border-radius: 5px;
 }
 
 .hero {
     text-align: center;
-    padding: 3em 2em;
-    background: linear-gradient(135deg, #005bbb, #ffd500);
-    color: white;
+    background: linear-gradient(90deg, #0057b7, #ffd700);
+    padding: 60px 20px;
 }
 
-.hero h2 {
-    margin: 0;
-    font-size: 2em;
+.logo {
+    width: 150px;
+    margin-bottom: 15px;
 }
 
-.hero p {
-    margin-top: 0.5em;
-    font-size: 1.2em;
+/* Анімації */
+.animated {
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.fade-in-delay {
+    animation: fadeIn 1.5s ease-out 1s forwards;
+}
+
+.slide-up {
+    animation: slideUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .news {
-    padding: 2em;
+    background: white;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .news h2 {
@@ -78,23 +83,17 @@ nav ul li a:hover {
 }
 
 .news-item {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    padding: 1em 1.5em;
-    margin: 1em auto;
-    max-width: 700px;
-    transition: transform 0.3s ease;
-}
-
-.news-item:hover {
-    transform: translateY(-4px);
+    margin-top: 1em;
+    padding: 0.5em;
+    border-left: 4px solid #0057b7;
+    background: #eef3fa;
+    border-radius: 5px;
 }
 
 footer {
     text-align: center;
-    background: #005bbb;
-    color: white;
     padding: 1em;
-    margin-top: 3em;
+    background: #0057b7;
+    color: white;
+    margin-top: 2em;
 }
