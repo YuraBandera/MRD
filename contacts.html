@@ -1,33 +1,49 @@
-html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакти</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="news.html">Новини</a></li>
-        <li><a href="contacts.html" class="active">Контакти</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <img src="herb.png" alt="Герб міста" class="herb">
+      <h1>Контакти</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+          <li><a href="join.html" class="btn primary-btn">Вступити до Ради</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
-  <main class="container animated fade-in">
-    <h1>Контакти</h1>
-    <p><strong>Міський Голова:</strong> Вакантно</p>
-    <p><strong>Заступник міського голови:</strong> Вакантно</p>
-    <p><strong>Заступник міського голови:</strong> Вакантно</p>
+  <main>
+    <section class="contact">
+      <div class="container">
+        <h2>Наші Контакти</h2>
+        <p>Ми завжди відкриті до діалогу та співпраці. Зв'язатися з нами можна за наступними контактами:</p>
+        <ul>
+          <li>📞 Телефон: +38 (056) 123-45-67</li>
+          <li>📧 Email: info@dnipro.gov.ua</li>
+          <li>🏢 Адреса: м. Дніпро, проспект Яворницького, 1</li>
+        </ul>
+        <p>Також ви можете звертатися через нашу контактну форму, або за допомогою соцмереж:</p>
+        <ul>
+          <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
-
   <footer>
-    <p>© 2025 Міська Рада м. Дніпра | Офіційний сайт</p>
+    <div class="container">
+      <p>&copy; 2025 Міська Рада м. Дніпра</p>
+    </div>
   </footer>
 </body>
 </html>
