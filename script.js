@@ -31,3 +31,10 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+// Перемикач теми
+const themeSwitch = document.getElementById('theme-switch');
+
+themeSwitch.addEventListener('change', () => {
+    document.body.classList.toggle('dark-theme');
+});
