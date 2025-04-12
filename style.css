@@ -1,202 +1,69 @@
 /* Загальні стилі */
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background: #f0f4f7;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to right, #0057b8, #ffcd00); /* Синьо-жовтий градієнт */
-  color: #333;
-  line-height: 1.6;
-  font-size: 16px;
-  background-size: cover;
-}
-
-/* Контейнер для всього контенту */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Стилі для хедера */
-.header {
-  background: rgba(0, 87, 184, 0.8); /* Темний фон з прозорістю */
+header {
+  background-color: #0057b8;
+  padding: 20px;
   color: white;
-  padding: 30px 0;
   text-align: center;
-  position: relative;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header .herb {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 60px;
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-.header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+nav ul li {
+  display: inline;
+  margin: 0 10px;
 }
 
-/* Стилі для навігації */
-.header nav ul {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-.header nav ul li {
-  margin: 0 15px;
-}
-
-.header nav ul li a {
+nav ul li a {
   color: white;
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#hero {
+  background: linear-gradient(to bottom, #0057b8, #ffcd00);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#map-section {
+  margin: 20px;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+/* Стилі для кнопок */
+.btn {
+  padding: 12px 24px;
   border-radius: 8px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
 }
 
-.header nav ul li a:hover {
-  color: #f0f0f0;
-  background-color: #ffcd00;
-  transform: scale(1.1); /* Анімація збільшення кнопки */
-}
-
-/* Стилі для головної секції */
-.hero {
-  text-align: center;
-  padding: 100px 0;
-  background: linear-gradient(to bottom, rgba(0, 87, 184, 0.8), rgba(0, 87, 184, 0.6)), url('your-image-path.jpg'); /* Градієнт + фонова картинка */
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
-
-.hero h2 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.hero p {
-  font-size: 1.4rem;
-  margin-bottom: 30px;
-}
-
-.hero .btn {
-  padding: 20px 35px;
-  font-size: 1.3rem;
-  border-radius: 8px;
-  background-color: #ffcd00;
-  color: #0057b8;
-  font-weight: 700;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.hero .btn:hover {
-  transform: scale(1.1); /* Анімація збільшення кнопки */
-  background-color: #ffb700;
-}
-
-/* Стилі для футера */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-footer a {
-  color: #ffcd00;
-  font-weight: 600;
-}
-
-/* Стилі для контенту */
-main {
-  padding: 60px 0;
-}
-
-.container h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.container p, .container ul {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
-
-/* Контакти */
-.contact p {
-  font-size: 1.2rem;
-}
-
-/* Анімація для елементів */
-.animated {
-  animation: fadeIn 1.5s ease-out;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Кнопки "Вступити" */
-.btn-primary {
+.primary-btn {
   background-color: #0057b8;
   color: white;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: inline-block;
-  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.btn-primary:hover {
+.primary-btn:hover {
   background-color: #0044a3;
   transform: scale(1.1);
-}
-
-/* Стилі для адаптивності */
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 2rem;
-  }
-  .hero h2 {
-    font-size: 2.5rem;
-  }
-  .hero p {
-    font-size: 1.2rem;
-  }
-  .hero .btn {
-    font-size: 1.2rem;
-    padding: 15px 30px;
-  }
-  .header nav ul {
-    flex-direction: column;
-  }
-  .header nav ul li {
-    margin: 10px 0;
-  }
 }
