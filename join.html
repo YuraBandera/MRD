@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Вступ до служби</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вступити до Ради</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="news.html">Новини</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-        <li><a href="join.html" class="active">Вступ</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="container animated fade-in">
-    <h1>Вступ до Виконавчої Служби</h1>
-    <p>Хочеш стати частиною нашої команди? Перейдіть за посиланням нижче, щоб подати електронну заяву:</p>
-
-    <div class="cta-box">
-      <a href="https://forum.ukraine-gta.com.ua/threads/МР-м-Дніпро-Електронна-заява-на-вступ-у-Міську-Раду-м-Дніпро.266755/" target="_blank" class="cta-button">
-        Подати заяву
-      </a>
+    <div class="container">
+      <img src="herb.png" alt="Герб міста" class="herb">
+      <h1>Вступити до Міської Ради</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+          <li><a href="join.html" class="btn primary-btn">Вступити до Ради</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <p>Після заповнення заявки з вами зв’яжеться представник нашого підрозділу.</p>
+  </header>
+  <main>
+    <section class="join">
+      <div class="container">
+        <h2>Як вступити до Міської Ради?</h2>
+        <p>Щоб стати частиною Міської Ради м. Дніпра, заповніть онлайн-заявку або надайте відповідні документи для розгляду.</p>
+        <form action="submit-form" method="POST">
+          <label for="name">Ваше ім'я:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Ваша електронна пошта:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Чому ви хочете стати частиною Ради:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit" class="btn primary-btn">Подати заявку</button>
+        </form>
+      </div>
+    </section>
   </main>
-
   <footer>
-    <p>© 2025 Міська Рада м. Дніпра | Офіційний сайт</p>
+    <div class="container">
+      <p>&copy; 2025 Міська Рада м. Дніпра</p>
+    </div>
   </footer>
 </body>
 </html>
