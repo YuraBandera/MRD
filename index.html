@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Міська Рада</title>
+    <title>Міська Рада м. Дніпра</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,8 +23,8 @@
 
     <!-- Головний контент -->
     <div class="container">
-        <h1>Ласкаво просимо до Міської Ради м. Дніпра</h1>
-        <p>Дізнайтеся більше про нашу діяльність та як ви можете долучитися до покращення міста.</p>
+        <h1 class="animated fade-in">Ласкаво просимо до Міської Ради м. Дніпра</h1>
+        <p class="animated fade-in">Дізнайтеся більше про нашу діяльність та як ви можете долучитися до покращення міста.</p>
         <img src="mta-screen_2025-04-12_12-48-55.png" alt="Карта Дніпра" class="map-img">
     </div>
 
@@ -33,9 +33,15 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Виберіть дію</h2>
-            <button id="viewResults">Переглянути результати</button>
-            <button id="submitSuggestion">Написати пропозицію</button>
+            <button id="viewResults" class="btn primary-btn">Переглянути результати</button>
+            <button id="submitSuggestion" class="btn primary-btn">Написати пропозицію</button>
         </div>
+    </div>
+
+    <!-- Перемикач теми -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" />
+        <label for="theme-switch"></label>
     </div>
 
     <script src="script.js"></script>
