@@ -1,4 +1,4 @@
-/* Спільні стилі для всіх сторінок */
+/* Загальні стилі */
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 header .herb {
@@ -37,6 +38,7 @@ h1 {
 nav ul {
   display: flex;
   list-style-type: none;
+  margin-top: 15px;
 }
 
 nav ul li {
@@ -48,59 +50,48 @@ nav ul li a {
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
   color: #f0f0f0;
 }
 
-section.news {
+main {
   background-color: white;
   padding: 60px 0;
 }
 
-section.news h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.welcome {
   text-align: center;
 }
 
-.news-item {
-  background-color: #f9f9f9;
+.welcome h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.news-item h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+.welcome p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
-.news-item .date {
-  font-size: 1rem;
-  color: #888;
-  margin-bottom: 15px;
-}
-
-.news-item p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.news-item a {
-  text-decoration: none;
+.btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.primary-btn {
   background-color: #0057b8;
   color: white;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
 }
 
-.news-item a:hover {
+.primary-btn:hover {
   background-color: #0044a3;
 }
 
@@ -109,4 +100,26 @@ footer {
   color: white;
   padding: 20px 0;
   text-align: center;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
+
+.fade-in-delay {
+  animation-delay: 0.5s;
 }
