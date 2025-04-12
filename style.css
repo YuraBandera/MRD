@@ -7,82 +7,77 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f5f5f5;
   color: #333;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Контейнер для всього контенту */
 .container {
   width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-header {
+/* Стилі для хедера */
+.header {
   background-color: #0057b8;
   color: white;
   padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   text-align: center;
+  position: relative;
 }
 
-header .herb {
-  width: 50px;
-  height: auto;
+.header .herb {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
 }
 
-h1 {
+.header h1 {
   font-size: 2.5rem;
 }
 
-nav ul {
+.header nav ul {
   display: flex;
-  list-style-type: none;
-  margin-top: 15px;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-nav ul li {
+.header nav ul li {
   margin: 0 15px;
 }
 
-nav ul li a {
+.header nav ul li a {
   color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-nav ul li a:hover {
+.header nav ul li a:hover {
   color: #f0f0f0;
 }
 
-main {
-  background-color: white;
-  padding: 60px 0;
-}
-
-.welcome {
-  text-align: center;
-}
-
-.welcome h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.welcome p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
+/* Стилі для кнопок */
 .btn {
   display: inline-block;
   padding: 12px 24px;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
   transition: background 0.3s ease;
 }
 
@@ -95,13 +90,127 @@ main {
   background-color: #0044a3;
 }
 
-footer {
-  background-color: #0057b8;
-  color: white;
-  padding: 20px 0;
+/* Стилі для секцій */
+main {
+  padding: 50px 0;
+}
+
+/* Стилі для секції "Про нас" */
+.about,
+.contact,
+.news,
+.join {
+  background-color: white;
+  padding: 50px 0;
   text-align: center;
 }
 
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Стилі для "Про нас" */
+.about p,
+.contact p,
+.news-item p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Стилі для форм на сторінці контактів */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0057b8;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0044a3;
+}
+
+/* Стилі для новин */
+.news-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.news-item .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0057b8;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.news-item .btn:hover {
+  background-color: #0044a3;
+}
+
+/* Стилі для сторінки "Вступити" */
+.join h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.join p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Футер */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Анімації */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -112,12 +221,7 @@ footer {
 }
 
 .animated {
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-}
-
-.fade-in {
-  animation-name: fade-in;
+  animation: fade-in 1s ease-in-out;
 }
 
 .fade-in-delay {
