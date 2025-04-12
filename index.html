@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Міська Рада м. Дніпра</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Підключення Leaflet.js для карти -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="about.html">Про нас</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="index.html" class="animated-link">Головна</a></li>
+        <li><a href="about.html" class="animated-link">Про нас</a></li>
+        <li><a href="contacts.html" class="animated-link">Контакти</a></li>
         <li><a href="https://surl.li/diemom" target="_blank" class="btn primary-btn">Вступити до Ради</a></li>
       </ul>
     </nav>
+    <!-- Перемикач теми -->
+    <button id="theme-toggle" class="btn">Перемкнути тему</button>
   </header>
 
   <main>
@@ -25,18 +26,12 @@
       <h1>Ласкаво просимо на офіційний сайт Міської Ради м. Дніпра</h1>
       <p>Дізнайтеся більше про нашу діяльність та як ви можете долучитися до покращення міста.</p>
     </section>
-
-    <section id="map-section">
-      <h2>Інтерактивна карта Дніпра</h2>
-      <div id="map"></div>
-    </section>
   </main>
 
   <footer>
     <p>© 2025 Міська Рада м. Дніпра</p>
   </footer>
 
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
