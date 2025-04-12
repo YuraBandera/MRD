@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Перемикач теми -->
     <div class="theme-switcher">
@@ -17,27 +19,29 @@
 
     <!-- Головна секція -->
     <section id="hero" class="hero-container">
-        <h1>Ласкаво просимо на офіційний сайт Міської Ради м. Дніпра</h1>
-        <p>Дізнайтеся більше про нашу діяльність та як ви можете долучитися до покращення міста.</p>
+        <!-- Герб міста -->
+        <div class="hero-logo">
+            <img src="герб.png" alt="Герб міста" class="center-img">
+        </div>
+        <h1 class="animated">Ласкаво просимо на офіційний сайт Міської Ради м. Дніпра</h1>
+        <p class="animated">Дізнайтеся більше про нашу діяльність та як ви можете долучитися до покращення міста.</p>
+        <a href="about.html" class="btn primary-btn animated">Про нас</a>
+        <a href="contacts.html" class="btn primary-btn animated">Контакти</a>
+        <a href="join.html" class="btn primary-btn animated">Вступити до Ради</a>
     </section>
 
     <!-- Інші секції сторінки -->
     <section id="about" class="about-container">
-        <h2>Про Міську Раду</h2>
-        <p>Міська Рада м. Дніпра — це головний орган місцевого самоврядування, який формує політику міста, ухвалює рішення для покращення життя мешканців та контролює їх виконання.</p>
-        <a href="about.html" class="btn primary-btn">Дізнатися більше</a>
-    </section>
-
-    <section id="contacts" class="contacts-container">
-        <h2>Контакти</h2>
-        <p>Для отримання додаткової інформації або звернення до нас, будь ласка, скористайтеся формою на цій сторінці.</p>
-        <a href="contacts.html" class="btn primary-btn">Зв'язатися з нами</a>
+        <h2 class="animated">Про Міську Раду</h2>
+        <p class="animated">Міська Рада м. Дніпра — це головний орган місцевого самоврядування, який формує політику міста, ухвалює рішення для покращення життя мешканців та контролює їх виконання.</p>
+        <a href="about.html" class="btn primary-btn animated">Дізнатися більше</a>
     </section>
 
     <footer>
-        <p>© 2025 Міська Рада м. Дніпра</p>
+        <p class="animated">© 2025 Міська Рада м. Дніпра</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
