@@ -5,6 +5,7 @@ body {
     padding: 0;
     background: linear-gradient(to right, #0057b8, #ffd700);
     color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 nav {
@@ -13,6 +14,7 @@ nav {
     align-items: center;
     padding: 20px;
     background-color: #003366;
+    transition: background-color 0.3s ease;
 }
 
 .logo-img {
@@ -34,6 +36,25 @@ ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+ul li a:hover {
+    transform: scale(1.1);
+}
+
+/* Анімація для тексту */
+.animated {
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .container {
@@ -122,4 +143,48 @@ button {
 button:hover {
     background-color: #0044a3;
     transform: scale(1.1);
+}
+
+/* Перемикач теми */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#theme-switch {
+    display: none;
+}
+
+#theme-switch + label {
+    background: #444;
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#theme-switch:checked + label {
+    background: #ffd700;
+}
+
+#theme-switch + label::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+#theme-switch:checked + label::before {
+    transform: translateX(25px);
 }
