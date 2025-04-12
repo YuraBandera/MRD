@@ -1,117 +1,117 @@
-/* Загальні стилі */
+/* Основні стилі */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f0f4f7;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Головний фон */
+.hero-container {
+    background: linear-gradient(to right, #0057b8, #ffd700);
+    color: #fff;
+    padding: 80px 0;
+    transition: background 0.3s ease;
+}
+
+.about-container, .contacts-container {
+    background: #f4f4f4;
+    color: #333;
+    padding: 60px 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Кнопки */
+.btn {
+    padding: 12px 24px;
+    background-color: #0057b8;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #0044a3;
 }
 
 /* Темна тема */
-body.dark-mode {
-  background-color: #121212;
-  color: white;
+body.dark-theme {
+    background-color: #121212;
+    color: #fff;
 }
 
-header {
-  background-color: #0057b8;
-  padding: 20px;
-  color: white;
-  text-align: center;
-  transition: background-color 0.3s ease;
+body.dark-theme .hero-container {
+    background: linear-gradient(to right, #333, #555);
 }
 
-/* Темна тема для хедеру */
-body.dark-mode header {
-  background-color: #333;
+body.dark-theme .about-container, .body.dark-theme .contacts-container {
+    background: #222;
+    color: #ddd;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+/* Перемикач теми */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 10px;
+.theme-switcher input[type="checkbox"] {
+    display: none;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+.theme-switcher .slider {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+.theme-switcher .slider:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s ease;
 }
 
-/* Кнопка перемикання теми */
-#theme-toggle {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #ffcd00;
-  border: none;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 8px;
+/* Коли перемикач увімкнений */
+#theme-toggle:checked + .slider {
+    background-color: #333;
 }
 
-#theme-toggle:hover {
-  background-color: #ffc107;
-}
-
-#hero {
-  background: linear-gradient(to bottom, #0057b8, #ffcd00);
-  color: white;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-main {
-  animation: fadeIn 1s ease-out;
-}
-
-/* Анімація для вкладок */
-.animated-link {
-  position: relative;
-  display: inline-block;
-}
-
-.animated-link:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background: #ffcd00;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.animated-link:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/* Стилі для кнопок */
-.btn {
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-
-.primary-btn {
-  background-color: #0057b8;
-  color: white;
-}
-
-.primary-btn:hover {
-  background-color: #0044a3;
-  transform: scale(1.1);
+#theme-toggle:checked + .slider:before {
+    transform: translateX(30px);
 }
