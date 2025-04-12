@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Вступити до Ради</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Вступити до Ради</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="header">
-    <div class="container">
-      <img src="герб.png" alt="Герб міста" class="herb">
-      <h1>Міська Рада м. Дніпра</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="btn">Головна</a></li>
-          <li><a href="about.html" class="btn">Про нас</a></li>
-          <li><a href="contacts.html" class="btn">Контакти</a></li>
-          <li><a href="join.html" class="btn primary-btn">Вступити до Ради</a></li>
-          <li><a href="news.html" class="btn">Новини</a></li>
-        </ul>
-      </nav>
+    <!-- Перемикач теми -->
+    <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="slider"></label>
     </div>
-  </header>
 
-  <main class="join">
-    <div class="container">
-      <h2>Вступити до Міської Ради</h2>
-      <p>Ми завжди раді новим ініціативам та бажаючим долучитися до роботи Міської Ради. Якщо ви хочете стати частиною команди та допомогти в розвитку нашого міста, подавайте заявку через форму нижче.</p>
-      <a href="https://surl.li/diemom" class="btn primary-btn" target="_blank">Подати заявку</a>
-    </div>
-  </main>
+    <section id="join" class="join-container">
+        <!-- Герб міста -->
+        <div class="hero-logo">
+            <img src="герб.png" alt="Герб міста" class="center-img">
+        </div>
+        <h1 class="animated">Вступити до Міської Ради</h1>
+        <p class="animated">Ви можете долучитися до нашої команди та працювати на благо міста Дніпра.</p>
+        <a href="https://surl.li/diemom" class="btn primary-btn animated">Приєднатися</a>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Міська Рада м. Дніпра</p>
-    </div>
-  </footer>
+    <footer>
+        <p class="animated">© 2025 Міська Рада м. Дніпра</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
