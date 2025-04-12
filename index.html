@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Міська Рада м. Дніпра</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <title>Міська Рада</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Перемикач теми -->
-    <div class="theme-switcher">
-        <input type="checkbox" id="theme-toggle">
-        <label for="theme-toggle" class="slider"></label>
+    <!-- Навігаційне меню -->
+    <nav>
+        <div class="logo">
+            <img src="герб.png" alt="Герб міста" class="logo-img">
+        </div>
+        <ul>
+            <li><a href="#">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+            <li><a href="https://docs.google.com/spreadsheets/d/1HpizK8GQbqDM-vzJnbF4RrVJesA7-2a1VlZEN4oaO_M/edit?usp=sharing" target="_blank">Результати</a></li>
+            <li><a href="#" id="suggestion-btn" class="btn primary-btn">Пропозиції</a></li>
+        </ul>
+    </nav>
+
+    <!-- Головний контент -->
+    <div class="container">
+        <h1>Ласкаво просимо до Міської Ради м. Дніпра</h1>
+        <p>Дізнайтеся більше про нашу діяльність та як ви можете долучитися до покращення міста.</p>
+        <img src="mta-screen_2025-04-12_12-48-55.png" alt="Карта Дніпра" class="map-img">
     </div>
 
-    <!-- Головна секція -->
-    <section id="hero" class="hero-container">
-        <!-- Герб міста -->
-        <div class="hero-logo">
-            <img src="герб.png" alt="Герб міста" class="center-img">
+    <!-- Модальне вікно для "Пропозиції" -->
+    <div id="suggestionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Виберіть дію</h2>
+            <button id="viewResults">Переглянути результати</button>
+            <button id="submitSuggestion">Написати пропозицію</button>
         </div>
-        <h1 class="animated">Ласкаво просимо на офіційний сайт Міської Ради м. Дніпра</h1>
-        <p class="animated">Дізнайтеся більше про нашу діяльність та як ви можете долучитися до покращення міста.</p>
-        <a href="about.html" class="btn primary-btn animated">Про нас</a>
-        <a href="contacts.html" class="btn primary-btn animated">Контакти</a>
-        <a href="join.html" class="btn primary-btn animated">Вступити до Ради</a>
-    </section>
-
-    <!-- Інші секції сторінки -->
-    <section id="about" class="about-container">
-        <h2 class="animated">Про Міську Раду</h2>
-        <p class="animated">Міська Рада м. Дніпра — це головний орган місцевого самоврядування, який формує політику міста, ухвалює рішення для покращення життя мешканців та контролює їх виконання.</p>
-        <a href="about.html" class="btn primary-btn animated">Дізнатися більше</a>
-    </section>
-
-    <footer>
-        <p class="animated">© 2025 Міська Рада м. Дніпра</p>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
