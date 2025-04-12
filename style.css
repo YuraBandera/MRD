@@ -1,117 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f0f4fa;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
-
-nav {
-    background: #0057b7;
-    padding: 10px 0;
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 12px 20px;
-    transition: background 0.3s;
-}
-
-nav ul li a:hover {
-    background: #003c8f;
-    border-radius: 5px;
-}
-
-.hero {
-    text-align: center;
-    background: linear-gradient(90deg, #0057b7, #ffd700);
-    padding: 60px 20px;
-}
-
-.logo {
-    width: 150px;
-    margin-bottom: 15px;
-}
-
-/* Анімації */
-.animated {
-    opacity: 0;
-    transform: translateY(20px);
-    animation-fill-mode: forwards;
-}
-
-.fade-in {
-    animation: fadeIn 1.5s ease-out forwards;
-}
-
-.fade-in-delay {
-    animation: fadeIn 1.5s ease-out 1s forwards;
-}
-
-.slide-up {
-    animation: slideUp 1.5s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.news {
-    background: white;
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.news h2 {
-    text-align: center;
-}
-
-.news-item {
-    margin-top: 1em;
-    padding: 0.5em;
-    border-left: 4px solid #0057b7;
-    background: #eef3fa;
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 1em;
-    background: #0057b7;
-    color: white;
-    margin-top: 2em;
-}
-.cta-box {
-  margin: 2rem 0;
+header {
+  background-color: #0057b8;
+  color: white;
+  padding: 20px 0;
   text-align: center;
 }
-
-.cta-button {
-  background-color: #0057b8;
-  color: #fff;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
-
-.cta-button:hover {
-  background-color: #00449b;
+.primary-btn {
+  background-color: #0057b8;
+  color: #fff;
+}
+.primary-btn:hover {
+  background-color: #0044a3;
+}
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+ul li {
+  margin: 8px 0;
+}
+.animated {
+  animation: fadeIn 1s ease-out;
+}
+.fade-in-delay {
+  animation-delay: 0.3s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
