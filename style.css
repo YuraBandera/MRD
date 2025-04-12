@@ -1,3 +1,4 @@
+/* Спільні стилі для всіх сторінок */
 * {
   margin: 0;
   padding: 0;
@@ -19,10 +20,9 @@ header {
   background-color: #0057b8;
   color: white;
   padding: 20px 0;
-  text-align: center;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 header .herb {
@@ -32,7 +32,6 @@ header .herb {
 
 h1 {
   font-size: 2.5rem;
-  margin-left: 20px;
 }
 
 nav ul {
@@ -52,67 +51,57 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #f0f0f0;
 }
 
-h2 {
+section.news {
+  background-color: white;
+  padding: 60px 0;
+}
+
+section.news h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-top: 20px;
+.news-item {
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-p {
+.news-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.news-item .date {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.news-item p {
   font-size: 1.1rem;
   line-height: 1.6;
+  margin-bottom: 10px;
 }
 
-a {
+.news-item a {
   text-decoration: none;
-}
-
-.btn {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.primary-btn {
+  padding: 10px 20px;
   background-color: #0057b8;
-  color: #fff;
-  font-size: 1.2rem;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.primary-btn:hover {
+.news-item a:hover {
   background-color: #0044a3;
-}
-
-section.intro {
-  background-color: #f4f4f4;
-  padding: 40px 0;
-  text-align: center;
-}
-
-section.about {
-  background-color: white;
-  padding: 40px 0;
-  text-align: center;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-ul li {
-  font-size: 1.2rem;
-  margin: 10px 0;
 }
 
 footer {
